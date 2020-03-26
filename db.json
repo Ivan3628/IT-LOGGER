@@ -1,0 +1,54 @@
+{
+  "logs": [
+    {
+      "id": 1,
+      "message": "Changed network card in server 222",
+      "tech": "Jennifer Williams",
+      "attention": false,
+      "date": "2020-03-24T11:05:34.485Z"
+    },
+    {
+      "id": 2,
+      "message": "Fixed hard drive on workstation 333",
+      "tech": "Sara Wilson",
+      "attention": true,
+      "date": "2020-03-23T17:20:40.321Z"
+    },
+    {
+      "id": 3,
+      "message": "1122 Wireless down",
+      "tech": "Sam Smith",
+      "attention": false,
+      "date": "2020-03-26T11:00:58.396Z"
+    },
+    {
+      "id": 4,
+      "message": "Workstation 026 is fixed",
+      "tech": "John Doe",
+      "attention": true,
+      "date": "2020-03-23T17:46:13.312Z"
+    }
+  ],
+  "techs": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Doe"
+    },
+    {
+      "id": 2,
+      "firstName": "Sam",
+      "lastName": "Smith"
+    },
+    {
+      "id": 3,
+      "firstName": "Sara",
+      "lastName": "Wilson"
+    },
+    {
+      "firstName": "Jennifer",
+      "lastName": "Williams",
+      "id": 4
+    }
+  ]
+}

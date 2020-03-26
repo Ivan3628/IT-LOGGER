@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--Import materialize.css-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>IT Loger JS</title>
+  </head>
+  <body>
+    <!--Search bar-->
+    <nav style=" margin-bottom: 30px" class="blue">
+      <div className="nav-wrapper">
+        <form>
+          <div class="input-field">
+            <input id="search" type="search" placeholder="Search logs..." />
+            <i class="material-icons">close</i>
+          </div>
+        </form>
+      </div>
+    </nav>
+    <!--Collection-->
+    <div class="container">
+      <h4 class="center">System Logs</h4>
+      <ul class="collection" id="log-list"></ul>
+    </div>
+    <!--Floating button-->
+    <div class="fixed-action-btn">
+      <a
+        href="#edit-add-log-modal"
+        class="btn-floating btn-large blue darken-2 modal-trigger new-log"
+      >
+        <i class="large material-icons">add</i>
+      </a>
+      <!--Log modal-->
+      <div id="edit-add-log-modal" class="modal" style="width:75%; height:75%;">
+        <div class="modal-content">
+          <h4>Enter System Log</h4>
+          <div class="row">
+            <!--Message-->
+            <div class="input-field">
+              <input
+                type="text"
+                name="Message"
+                placeholder="Message"
+                id="message"
+              />
+              <label for="message" class="active">
+                Log Message
+              </label>
+            </div>
+          </div>
+          <!--Select form-->
+          <div class="row">
+            <div class="input-field">
+              <select
+                name="tech"
+                class="browser-default"
+                id="tech-select-options"
+              >
+                <option value="" disabled>
+                  Select Technician
+                </option>
+              </select>
+            </div>
+          </div>
+          <!--Checkbox-->
+          <div class="row">
+            <div class="input-field">
+              <p>
+                <label>
+                  <input type="checkbox" class="filled-in" value="attention" />
+                  <span>Needs Attention</span>
+                </label>
+              </p>
+            </div>
+          </div>
+          <!--ID-->
+          <div class="row" style="display:none">
+            <div class="input-field">
+              <input type="hidden" id="id" value="" />
+            </div>
+          </div>
+        </div>
+        <!--Footer-->
+        <div class="modal-footer quit-edit">
+          <a
+            href="#!"
+            class="modal-close waves-effect blue waves-light btn add-log"
+            style="margin-left:1rem"
+          >
+            Enter
+          </a>
+        </div>
+      </div>
+      <!---->
+      <ul>
+        <li>
+          <a
+            href="#tech-list-modal"
+            class=" btn-floating green modal-trigger tech-collection"
+            ><i class="material-icons">person</i></a
+          >
+          <!--Technician list-->
+          <div id="tech-list-modal" class="modal">
+            <div class="modal-content">
+              <h4>Technician list</h4>
+              <div class="row" id="tech-workers"></div>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <a
+            href="#add-tech-modal"
+            class="btn-floating red modal-trigger new-tech"
+            ><i class="material-icons">person_add</i></a
+          >
+          <!--New tech modal-->
+          <div id="add-tech-modal" class="modal">
+            <div class="modal-content">
+              <h4>New Technician</h4>
+              <div class="row">
+                <div class="input-field">
+                  <input type="text" name="firstName" id="first-name" />
+                  <label for="firstName" class="active">
+                    First Name
+                  </label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field">
+                  <input type="text" name="lastName" id="last-name" />
+                  <label for="lastName" class="active">
+                    Last Name
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a
+                href="#!"
+                class="modal-close waves-effect blue waves-light btn add-new-tech"
+              >
+                Enter
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="build/app.bundle.js"></script>
+  </body>
+</html>
