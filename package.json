@@ -20,7 +20,7 @@
     "concurrently": "^5.1.0",
     "json-server": "^0.15.1",
     "webpack": "^4.16.1",
-    "webpack-cli": "^3.0.8",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
